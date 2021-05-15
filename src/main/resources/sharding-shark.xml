@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <bean id="shardRule" class="com.sharksharding.core.shard.ShardRule" init-method="init">
+        <property name="isShard" value="true"/>
+        <property name="wr_index" value="r32w0"/>
+        <property name="shardMode" value="true"/>
+        <property name="consistent" value="true"/>
+    </bean>
+</beans>
