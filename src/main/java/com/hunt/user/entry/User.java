@@ -2,13 +2,14 @@ package com.hunt.user.entry;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 public class User {
     private Long id;
     private String userName;
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime birthday;
+    private Date birthday;
+    private Date addTime;
 
     public Long getId() {return id;}
 
@@ -18,7 +19,11 @@ public class User {
 
     public void setUserName(String userName) {this.userName = userName;}
 
-    public LocalDateTime getBirthday() {return birthday;}
+    public Date getBirthday() {return birthday;}
 
-    public void setBirthday(LocalDateTime birthday) {this.birthday = birthday;}
+    public void setBirthday(Date birthday) {this.birthday = birthday;}
+
+    public Date getAddTime() {return addTime;}
+
+    public void setAddTime(Date addTime) {this.addTime = addTime;}
 }

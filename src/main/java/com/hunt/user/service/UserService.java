@@ -1,3 +1,8 @@
 package com.hunt.user.service;
 
-public interface UserService {}
+import com.hunt.user.entry.User;
+
+public interface UserService {
+
+    int register(User user);
+}
