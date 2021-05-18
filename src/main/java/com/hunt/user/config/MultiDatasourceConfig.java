@@ -45,7 +45,7 @@ public class MultiDatasourceConfig {
 
         //分库分表路由策略
         userTableRuleConf.setDatabaseShardingStrategyConfig(new InlineShardingStrategyConfiguration("id", "user${id % 2}"));
-        userTableRuleConf.setTableShardingStrategyConfig(new InlineShardingStrategyConfiguration("id", "user${id % 2}"));
+        userTableRuleConf.setTableShardingStrategyConfig(new InlineShardingStrategyConfiguration("id", "user${id % 4}"));
 
         //分片规则
         ShardingRuleConfiguration shardingRuleConf = new ShardingRuleConfiguration();
